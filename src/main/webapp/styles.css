@@ -1,0 +1,176 @@
+/* 全局样式 */
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 1.7em;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 小导航栏样式 */
+nav1 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5em;
+    display: flex;
+    justify-content: left;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+}
+
+nav1 li {
+    margin: 0 1em;
+    position: relative; /* 添加相对定位 */
+}
+
+nav1 li:first-child a {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    color: #007bff; /* 添加选中时的文字颜色 */
+}
+
+nav1 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease-in-out;
+}
+
+nav1 a:hover {
+    color: #007bff;
+}
+
+/* 让选中项的下划线和导航栏下边界平齐 */
+nav1 li:first-child a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    transform: scaleX(0); /* 初始时不显示下划线 */
+    transition: transform 0.2s ease-in-out;
+}
+
+nav1 li:first-child a:hover::after,
+nav1 li:first-child a:focus::after,
+nav1 li:first-child a:active::after {
+    transform: scaleX(1); /* 显示下划线 */
+}
+
+/* 号码查询表单样式 */
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+input[type="text"] {
+    padding: 0.5em;
+    border-radius: 0.25em;
+    border: 1px solid #ccc;
+    margin-right: 0.5em;
+}
+
+button[type="submit"] {
+    padding: 0.5em;
+    border-radius: 0.25em;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 表格样式 */
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+    border: 30px solid white; /* 调整表格边框的样式和颜色 */
+    font-family: Arial, sans-serif; /* 设置表格的字体 */
+}
+
+thead th {
+    text-align: center; /* 调整表头的对齐方式 */
+    font-weight: bold;
+    padding: 0.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: #f2f7ff; /* 淡蓝色 */
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #ffffff; /* 白色 */
+}
+
+tbody td {
+    text-align: left; /* 调整表格内容的对齐方式 */
+    padding: 0.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+table {
+    margin-top: 1em; /* 调整表格的上外边距 */
+}
+
+table {
+    width: 80%; /* 调整表格的宽度 */
+}
+
+/* 底部大导航栏样式 */
+footer nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 1em 0;
+    padding-bottom: 30px; /* 添加底部内边距，确保底部导航栏不会覆盖页面内容 */
+    display: flex;
+    justify-content: center;
+}
+
+footer nav li {
+    margin: 0 1em;
+}
+
+footer nav a {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease-in-out;
+}
+
+footer nav a:hover {
+    color: #007bff;
+}
+
+/* 让底部导航栏文字居中 */
+footer nav ul {
+    align-items: center;
+}
